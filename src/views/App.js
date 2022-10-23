@@ -31,23 +31,26 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className='menu'>
-            <RandomItem
-              start={this.state.start}
-              setRandomId={this.setRandomId}
-              setStart={this.setStart}
-            />
-          </div>
+
+          <RandomItem
+            start={this.state.start}
+            setRandomId={this.setRandomId}
+            setStart={this.setStart}
+          />
+
 
           <div className='content'>
-            <SimilarItem
-              title="buy_tgt"
-              array_item_id={this.state.buy_tgt}
-            />
-            <SimilarItem
-              title="uucf"
-              array_item_id={this.state.uucf}
-            />
+            {this.state.start ? <></> : <>
+              <SimilarItem
+                title="Using buy_tgt"
+                array_item_id={this.state.buy_tgt}
+              />
+              <SimilarItem
+                title="Using user-user collaborative filtering"
+                array_item_id={this.state.uucf}
+              />
+            </>}
+
           </div>
         </header>
       </div>

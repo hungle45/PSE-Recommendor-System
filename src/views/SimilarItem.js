@@ -1,5 +1,5 @@
 import React from "react";
-import './../styles/App.scss'
+import './../styles/App.scss';
 
 class SimilarItem extends React.Component {
     state = {
@@ -13,7 +13,10 @@ class SimilarItem extends React.Component {
     render() {
         return (
             <div className='similar-container'>
-                <div onClick={() => this.handleShowHidden()}>{this.props.title}</div>
+                <div className="similar-header">
+                    <div className="similar-title">{this.props.title}</div>
+                    <div onClick={() => this.handleShowHidden()} className="similar-btn">{this.state.hidden ? "+" : "-"}</div>
+                </div>
                 {
                     this.state.hidden ?
                         <></> :
@@ -22,7 +25,7 @@ class SimilarItem extends React.Component {
                                 let folder = id.substring(0, 3)
                                 let src = `/images/${folder}/${id}.jpg`
                                 return (
-                                    <img key={id + index} src={src} alt="jpg" ></img>
+                                    <img key={id} src={src} alt="jpg" className="img"></img>
                                 )
                             })}
                         </>
