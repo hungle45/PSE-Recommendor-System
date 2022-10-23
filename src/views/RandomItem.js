@@ -54,7 +54,6 @@ class RandomItem extends React.Component {
                     <div className="ran-content">
                         <div>Customer History </div>
                         {this.state.history_item_id.map((id, index) => {
-                            if (index > 8) return (<></>)
                             let folder = id.substring(0, 3)
                             let src = `/images/${folder}/${id}.jpg`
                             return (

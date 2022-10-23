@@ -52,6 +52,7 @@ body {
   .ran-btn {
     width: 200px;
     height: 50px;
+    min-height: 50px;
     margin: 10px 0;
     background-color: #feffff;
     font-size: 18px;
@@ -109,7 +110,8 @@ body {
     border-radius: 10px;
     background-color: #feffff;
     margin: 0 auto;
-    margin-top: 2%;
+    margin-top: 2.5%;
+
 
     .similar-header {
       display: flex;
@@ -131,12 +133,17 @@ body {
         justify-content: center;
         cursor: pointer;
       }
+
+      .similar-btn:hover,
+      .similar-btn:focus {
+        color: #3aafa9;
+      }
     }
 
 
     .img {
-      height: 22.5%;
-      width: 14%;
+      height: 22%;
+      width: 14.2%;
       border: 2px solid #17252A;
       box-sizing: border-box;
       margin: 20px 0;
